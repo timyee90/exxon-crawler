@@ -37,8 +37,8 @@ const { sleep } = require('./utils.js');
     });
 
     search = search.map((itemList) => {
-      let [address, coorinates] = itemList;
-      coordinates = coorinates.children[0].outerHTML.match(re) ?? [null];
+      let [address, coordinates] = itemList;
+      coordinates = coordinates.children[0].outerHTML.match(re) ?? [null];
       return [address.children[2].innerText, coordinates[0]];
     });
     return search;
